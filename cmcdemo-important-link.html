@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>CMC DEMO - ECOMMERCE MICROSERVICE BACK END PROJECT</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="this is project BE for Ecommerce - a demo project of DU6 Pool team">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <div class="container justify-content-center align-items-center">
+                <a class="navbar-brand" href="#" style="font-size: 25px;"> <b> E-Commerce BE</b></a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <main>
+        <ul class="nav nav-tabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#home">Concept</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu1">Architecture</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu2">CI/CD</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu3">Link of contents</a>
+            </li>
+        </ul>
+        <br><br>
+        <div class="tab-content" style="font-size: 20px;">
+            <!-- Concept -->
+            <div id="home" class="container tab-pane active">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center g-2">
+                        <div class="col"><b>Concept</b></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <p class="fas fa-paragraph">
+                                Back end đóng vai trò là xương sống cho bất kì Web-application nào, việc xây dựng BE
+                                chuẩn chỉ là một yêu cầu tối thiểu cho một Web-app nhanh, mạnh, chịu tải, chịu lỗi tốt,
+                                dễ
+                                quản lý, health check, maintain, scale trong tương lai.
+                            </p>
+                            <p class="fas fa-paragraph">
+                                Để đạt được những điều trên, kiến trúc của project BE phải được cân nhắc kĩ càng. Với sự
+                                phát triển của
+                                hạ tầng kĩ thuật phần mềm và yêu cầu giảm sự phụ thuộc giữa các module với nhau, cũng
+                                như để dễ dàng tích hợp công nghệ
+                                và deploy trên các nền tảng máy ảo, đám mây vốn không có nhiều sức mạnh xử lý như các
+                                nền tảng vật lý thông thường, kiến trúc
+                                Microservice sẽ là sự lựa chọn phù hợp.
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row justify-content-center align-items-center g-2">
+                        <div class="col"><b>Microservice ???</b></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <p class="fas fa-paragraph">
+                            <figure class="text-start">
+                                <blockquote class="blockquote">
+                                    <p><i class="fas fa-quote-left    ">'A microservice architecture (a variant of the
+                                            Service
+                                            Orient Architecture
+                                            structural style) is an architectural pattern that arranges an application
+                                            as a
+                                            collection of loosely-coupled, fine-grained services, communicating through
+                                            lightweight protocols. Services are small in size, messaging-enabled,
+                                            bounded by
+                                            contexts, autonomously developed, independently deployable, decentralized
+                                            and
+                                            built and released with automated processes.'</i></p>
+                                </blockquote>
+                                <figcaption class="blockquote-footer">
+                                    <cite title="Source Title">Theo <a
+                                            href="https://en.wikipedia.org/wiki/Microservices"
+                                            target="_blank">Wikipedia</a></cite>
+                                </figcaption>
+                            </figure>
+                            </p>
+                            <p class="fas fa-paragraph">
+                                Vậy có thể rút ra các tính chất của các service nằm trong một hệ thống microservice:
+                            <ul class="list-group list-group-numbered">
+                                <li class="list-group-item">Dễ bảo trì, dễ test</li>
+                                <li class="list-group-item">Ít phụ thuộc lẫn nhau</li>
+                                <li class="list-group-item">Có thể triển khai độc lập</li>
+                                <li class="list-group-item">Tập trung vào nghiệp vụ chính của bản thân</li>
+                                <li class="list-group-item">Được quản lý bởi 1 team nhỏ (5 đến 10 thành viên)</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row justify-content-center align-items-center g-2">
+                        <div class="col"><b>Pet Project - ECommerce</b></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <p class="fas fa-paragraph">
+                                Với tinh thần trên, team pool của DU6 quyết định xây dựng một demo project với domain
+                                liên quan đến
+                                thương mại điện tử, chạy trên nền BE là một project Spring Cloud với kiến trúc
+                                Microservice
+                                , project BE này sử dụng một số công nghệ mới nhất của hệ sinh thái Spring, kết hợp với
+                                docker, google cloud và
+                                github.
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <!-- Architecture -->
+            <div id="menu1" class="container tab-pane fade">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center g-2">
+                        <div class="col"><b>Project architect diagram</b></div>
+                    </div>
+                    <br>
+                    <img src="./asset/EcommerceSA.svg" class="img-fluid rounded-top" alt="">
+                    <br>
+                    <div class="row justify-content-center align-items-center g-2">
+                        <div class="col"><b>Tech-stack</b></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <p class="fas fa-paragraph">
+                                Các công nghệ sử dụng trong project:
+                                <br>
+                            <ul class="list-group list-group-numbered">
+                                <li class="list-group-item">
+                                    <b>Spring boot</b>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">Spring JPA + Mysql Driver</li>
+                                        <li class="list-group-item">Spring Actuartor</li>
+                                        <li class="list-group-item">Spring cloud Gateway</li>
+                                        <li class="list-group-item">Spring cloud Discovery server + client</li>
+                                        <li class="list-group-item">Spring cloud OpenFeign</li>
+                                        <li class="list-group-item">Spring cloud Config server + client</li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>Database</b>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">MySQL</li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>Version control</b>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">GitHub</li>
+                                    </ul>
+                                </li>
+                                <li class="list-group-item">
+                                    <b>CI/CD</b>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">Docker</li>
+                                        <li class="list-group-item">GitHub actions</li>
+                                        <li class="list-group-item">Google cloud platform</li>
+                                        <li class="list-group-item">Docker Watchtower</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <div id="menu2" class="container tab-pane fade">
+                <div class="container">
+                    <br>
+                    <img src="./asset/ci-cd.png" class="img-fluid rounded-top" alt="">
+                    <br>
+                    <br>
+                    <div class="row justify-content-center align-items-center g-2">
+                        <div class="col"><b>CI - Continuous Integration (Dev)</b></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <p class="fas fa-paragraph">
+                                Trong quá trình làm việc, team dự án sẽ phải tích hợp code vào 1 lúc nào đó,
+                                thường sẽ là vào cuối ngày, hết nửa sprint, hết task estimate time,...
+                                khi đó sẽ phát sinh các vấn đề mà nếu không chạy test sẽ không thể phát hiện ra được
+                                , ví dụ như hard code các variable liên quan đến môi trường, đường dẫn file, code
+                                convention chưa chuẩn, lấy config sai
+                                profile... vì vậy build và chạy test mỗi lần tích hợp code là một việc cần thiết.
+                            </p>
+                            <p class="fas fa-paragraph">
+                                CI là phase nằm phía developer. Khi một task hoàn thành, lập trình
+                                viên nên check
+                                và build + test thử trên local trơn tru trước khi commit và push lên VCS, khi teamlead
+                                hoặc techlead review change xong và merge, họ cũng sẽ build và test
+                                source code trước khi merge vào nhánh dùng để release. Nếu có lỗi xảy ra ở đây, change
+                                phải được roll-back
+                                và dev sẽ phải sửa lại code trước khi lặp lại quá trình này lần nữa
+                            </p>
+                            <p class="fas fa-paragraph">
+                                CI chính là một thành phần tiên quyết trong kĩ thuật CI/CD, nó là tiền đề để bước vào
+                                bước tiếp theo:
+                                CD - Continuous Delivery
+                            </p>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div class="row justify-content-center align-items-center g-2">
+                        <div class="col"><b>CI - Continuous Delivery (Deployment) (Ops)</b></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <p class="fas fa-paragraph">
+                                Về khái niệm, đây là phase mà source code được chuyển giao lên các môi trường staging,
+                                dev, test, pilot hoặc
+                                product. Trong bước này cũng vẫn có thể chạy các loại test như integration test, unit
+                                test. Tóm lại, bước này nhằm giảm
+                                thiểu tối đa effort dùng trong việc deploy, khi mà các bước như build package, run test
+                                trên môi trường, containerize, update old version
+                                đều đã có thể được tự động hoá.
+                            </p>
+                            <p class="fas fa-paragraph">
+                                CD được diễn ra tự động (trước đây là thủ công bởi đội vận hành Operation team).
+                            </p>
+                        </div>
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <div class="row justify-content-center align-items-center g-2">
+                        <div class="col"><b>CI/CD với BE của Ecommerce Demo Project</b></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col">
+                            <p class="fas fa-paragraph">
+                                Về CI, team BE tuân thủ tất cả các bước trong quy trình, từ plan lên phương án code,
+                                coding tuân thử convention,
+                                tất cả các change đều được build và test local trước khi commit lên Github trên một
+                                nhánh riêng và sẽ được
+                                team lead review trước khi tạo pull (merge) request vào nhánh chính.
+                            </p>
+                            <p class="fas fa-paragraph">
+                                CD , team áp dụng công nghệ container vào microservice, sử dụng Github Actions làm CD
+                                pipeline tự động build image và push lên
+                                Docker repository. Trên Google cloud cài đặt watchtower để phát hiện push event trên
+                                Docker repo, đồng thời pull và update container
+                                của service ấy.
+                            </p>
+                            <picture>
+                                <img src="./asset/pipeline_github_actions.png" class="img-fluid"
+                                    alt="Github CD pipeline">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="menu3" class="container tab-pane fade">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Service/Component name</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Github repo</th>
+                                <th scope="col">Docker repo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">Important document</td>
+                                <td>
+                                    Một repository trên Github chứa các tài liệu quan trọng cho việc dựng và deploy
+                                    project microservice này.
+                                </td>
+                                <td> <a href="https://github.com/PhaTLa/cmcdemo-util-files" target="_blank" rel="noopener noreferrer">Link</a>
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Config-server</td>
+                                <td>
+                                    Dùng làm một trung tâm kiểm soát cài đặt cho tất cả các service trong hệ thống. Mỗi
+                                    khi một service khởi động, nó request đến config server này để pull config mới nhất
+                                    về.
+                                    Hiện tại chưa có khả năng auto-fetch và broadcast config change, nhưng đó chỉ là vấn
+                                    đề
+                                    thời gian.
+                                </td>
+                                <td> <a href="https://github.com/PhaTLa/cmcdemo-centralize-server"
+                                        target="_blank" rel="noopener noreferrer">Link</a> </td>
+                                <td>
+                                    <a href="https://hub.docker.com/layers/lampt1210/first-repo/cmcdemo-config-server/images/sha256-3d0f2bef276bdd9f5683c1f5b73da7e587088aba48985e401ffbf21290f03884?context=repo"
+                                        target="_blank" rel="noopener noreferrer">
+                                        Link
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Config store</td>
+                                <td>
+                                    Một repository trên Github đóng vai trò như DB cho config-server, nó chứa tất cả các
+                                    file config của các service theo một định dạng nhất định.
+                                </td>
+                                <td> <a href="https://github.com/PhaTLa/cmc-demo-centralize-config"
+                                        target="_blank" rel="noopener noreferrer">Link</a> </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">MySql</td>
+                                <td>
+                                    Image của Mysql này đã được re-tag để dễ sử dụng với docker-compose. Hoàn toàn có
+                                    thể thay bằng
+                                    image chính chủ của oracle trên hub của họ.
+                                </td>
+                                <td> </td>
+                                <td>
+                                    <a href="https://hub.docker.com/layers/lampt1210/first-repo/cmcdemo-mysql/images/sha256-fe2a93f68a7ddef56a39cbc8b3faaf41ca6c910978255119941c1b71899aa6c6?context=repo"
+                                        target="_blank" rel="noopener noreferrer">
+                                        Link
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Discovery service</td>
+                                <td>
+                                    Service này dùng làm một Naming server/service registry server, khi một service
+                                    start, nó sẽ đăng kí với
+                                    service này các thông tin như tên, ip, host, và update tình trạng mỗi vài chục giây
+                                    để có thể monitor và
+                                    health-check. Đồng thời Discovery service cũng cung cấp giao diện để liên lạc giữa
+                                    các service trong context
+                                    của Spring cloud ví dụ như qua OpenFeign hoặc Gateway.
+                                </td>
+                                <td> <a href="https://github.com/PhaTLa/cmcdemo-discovery-service"
+                                        target="_blank" rel="noopener noreferrer">Link</a> </td>
+                                <td>
+                                    <a href="https://hub.docker.com/layers/lampt1210/first-repo/cmcdemo-discovery-service/images/sha256-7474ccee493fb9b974e4c230c8dceb19b7bdae3a175267e53021ae1271707c2e?context=repo"
+                                        target="_blank" rel="noopener noreferrer">
+                                        Link
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Gateway service</td>
+                                <td>
+                                    Service này dùng làm một proxy cho toàn bộ hệ thống microservice. Tất cả các request
+                                    đến đều phải đi qua Gateway.
+                                    Cụ thể, Gateway trong hệ thống này đảm nhận các vai trò sau: Request authentication
+                                    proxy, user-session manager,
+                                    routing request, load-balancer,
+                                    request fowarder,.... khả năng routing, load-balancing và forwarding được cung cấp
+                                    trong context của Spring cloud.
+                                </td>
+                                <td> <a href="https://github.com/PhaTLa/cmcdemo-gateway-service"
+                                        target="_blank" rel="noopener noreferrer">Link</a> </td>
+                                <td>
+                                    <a href="https://hub.docker.com/layers/lampt1210/first-repo/cmcdemo-gateway-service/images/sha256-8b5593b610b28f86f6332c185ea4e696cba028d8bf6f8f22b9f958521c130f42?context=repo"
+                                        target="_blank" rel="noopener noreferrer">
+                                        Link
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">User service</td>
+                                <td>
+                                    User service mang các xử lý logic và thao tác data liên quan đến người dùng, ex:
+                                    đăng kí người dùng mới,
+                                    đăng nhập, tìm theo username hoặc id... Nó quản lý hai bảng trong DB là role và
+                                    user. Vì có apply spring security
+                                    và các dữ liệu liên quan đến user đều là confidential, nên tất cả các request dù từ
+                                    ngoài hay nội bộ microservice
+                                    đều phải được authorize thông qua JWT hoặc API key (trừ các API đăng ký/đăng nhập).
+                                </td>
+                                <td> <a href="https://github.com/PhaTLa/cmcdemo-user-service" target="_blank" rel="noopener noreferrer">Link</a>
+                                </td>
+                                <td>
+                                    <a href="https://hub.docker.com/layers/lampt1210/first-repo/cmcdemo-user-service/images/sha256-ce2fdc449f14a668a58b04fd9c11edae317ca33b3c5ed053193ce68e1819cdd1?context=repo"
+                                        target="_blank" rel="noopener noreferrer">
+                                        Link
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Common service</td>
+                                <td>
+                                    Service này xử lý các tác vụ liên quan đến lưu trữ file (trên ổ cứng) và download file từ 
+                                    người dùng.
+                                </td>
+                                <td> <a href="https://github.com/PhaTLa/cmc-demo-common-service" target="_blank" rel="noopener noreferrer">Link</a>
+                                </td>
+                                <td>
+                                    <a href="https://hub.docker.com/layers/lampt1210/first-repo/cmcdemo-common-service/images/sha256-3acdb901fff84ac358bb647e518a0911ced671f88fe1b916cfcbf18b12e2c85e?context=repo"
+                                        target="_blank" rel="noopener noreferrer">
+                                        Link
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Product service</td>
+                                <td>
+                                    Product service chịu trách nhiệm xử lý các request liên quan đến product, images và category, nó cũng quản lý 
+                                    các bảng và bảng phụ tương ứng. Tại đây có feign client refer đến User và Common service.
+                                </td>
+                                <td> <a href="https://github.com/PhaTLa/cmc-demo-product-service" target="_blank" rel="noopener noreferrer">Link</a>
+                                </td>
+                                <td>
+                                    <a href="https://hub.docker.com/layers/lampt1210/first-repo/cmcdemo-product-service/images/sha256-32f22f8357be4206721330db62b3f6f29c1d7bb46dd1e0aedc6a40c4eaf63dc4?context=repo"
+                                        target="_blank" rel="noopener noreferrer">
+                                        Link
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Blog service</td>
+                                <td>
+                                    Blog service xử lý request liên quan đến blog (tạo, duyệt, xoá ,...), nó quản lý bảng blog trong DB và có link với 
+                                    User, Product qua Feign.
+                                </td>
+                                <td> <a href="https://github.com/PhaTLa/cmc-demo-blog-service" target="_blank" rel="noopener noreferrer">Link</a>
+                                </td>
+                                <td>
+                                    <a href="https://hub.docker.com/layers/lampt1210/first-repo/cmcdemo-blog-service/images/sha256-3ecf95595b3de9acbd20adeb569c5c0bac5dc77aefed0eb72ed5a15f4f288eae?context=repo"
+                                        target="_blank" rel="noopener noreferrer">
+                                        Link
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Cart service</td>
+                                <td>
+                                    Xử lý vấn đề liên quan đến cart, nó trực tiếp quản lý bảng cart và có link với user và product qua feign.
+                                </td>
+                                <td> <a href="https://github.com/PhaTLa/cmc-demo-cart-service" target="_blank" rel="noopener noreferrer">Link</a>
+                                </td>
+                                <td>
+                                    <a href="https://hub.docker.com/layers/lampt1210/first-repo/cmcdemo-cart-service/images/sha256-719af8a0a4ad877f5ed838d779bcdaa635cf358ca18bc3724b79f6ac0e75a755?context=repo"
+                                        target="_blank" rel="noopener noreferrer">
+                                        Link
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Watchtower</td>
+                                <td>
+                                    Một third-party service dùng docker socket để observe một repository trên docker hub tương ứng với 
+                                    các service đang chạy. Khi có bất kì một image mới nào được push lên hub, nó sẽ tự động pull về và build một 
+                                    container mới của service đang tồn tại và chạy nó.
+                                </td>
+                                <td> <a href="https://hub.docker.com/r/containrrr/watchtower/tags/" target="_blank" rel="noopener noreferrer">Link</a>
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
